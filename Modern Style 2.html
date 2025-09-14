@@ -26,78 +26,40 @@
     </nav>
   </header>
 
+  <!-- ================= HERO ================= -->
   <section id="home" class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <p class="eyebrow">Hi there — I’m</p>
-      <h1>Loukas Pritsas</h1>
-      <p class="tagline">Data & AI Engineer crafting practical, elegant solutions.</p>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Hi there — I’m</p>
+        <h1>Loukas Pritsas</h1>
+        <p class="tagline">Data & AI Engineer crafting practical, elegant solutions.</p>
 
-      <div class="hero-cta">
-        <a class="btn primary" href="#projects">See my work</a>
-        <a class="btn ghost" href="#contact">Contact</a>
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+
+        <div class="hero-social" aria-label="Social links">
+          <a href="https://linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+        </div>
       </div>
 
-      <div class="hero-social" aria-label="Social links">
-        <a href="https://linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-          <i class="fab fa-linkedin fa-lg"></i>
-        </a>
-        <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub">
-          <i class="fab fa-github fa-lg"></i>
-        </a>
-      </div>
-    </div>
-
-    <!-- Geometric Illustration -->
-    <div class="hero-visual hero-visual-svg" aria-hidden="true">
-      <!-- Inline SVG pattern: grid + nodes + orbital stroke -->
-      <svg viewBox="0 0 560 560" width="100%" height="100%" role="presentation">
-        <!-- background glow -->
-        <defs>
-          <radialGradient id="g1" cx="50%" cy="50%">
-            <stop offset="0%" stop-color="rgba(124,92,255,0.9)"/>
-            <stop offset="60%" stop-color="rgba(124,92,255,0.15)"/>
-            <stop offset="100%" stop-color="rgba(124,92,255,0)"/>
-          </radialGradient>
-          <radialGradient id="g2" cx="30%" cy="70%">
-            <stop offset="0%" stop-color="rgba(30,192,255,0.9)"/>
-            <stop offset="60%" stop-color="rgba(30,192,255,0.15)"/>
-            <stop offset="100%" stop-color="rgba(30,192,255,0)"/>
-          </radialGradient>
-        </defs>
-
-        <circle cx="420" cy="140" r="160" fill="url(#g1)"/>
-        <circle cx="140" cy="420" r="140" fill="url(#g2)"/>
-
-        <!-- subtle grid -->
-        <g opacity=".18">
-          <defs>
-            <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-              <path d="M 28 0 L 0 0 0 28" fill="none" stroke="white" stroke-width="0.6"/>
-            </pattern>
-          </defs>
-          <rect x="0" y="0" width="560" height="560" fill="url(#grid)"/>
-        </g>
-
-        <!-- nodes -->
-        <g class="float">
-          <circle cx="120" cy="140" r="4" fill="white" opacity=".9"/>
-          <circle cx="220" cy="200" r="3" fill="white" opacity=".7"/>
-          <circle cx="320" cy="110" r="3.5" fill="white" opacity=".85"/>
-          <circle cx="420" cy="260" r="4" fill="white" opacity=".9"/>
-          <circle cx="310" cy="360" r="3" fill="white" opacity=".7"/>
-          <circle cx="190" cy="420" r="3.5" fill="white" opacity=".85"/>
-        </g>
-
-        <!-- orbit line -->
-        <g class="orbit">
-          <ellipse cx="280" cy="280" rx="190" ry="120" fill="none"
-                   stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
-        </g>
-      </svg>
-    </div>
+    <div class="hero-visual hero-visual-lottie" aria-hidden="true">
+    <!-- Lottie player -->
+    <lottie-player
+      src="https://assets1.lottiefiles.com/packages/lf20_w51pcehl.json"
+      background="transparent"
+      speed="1"
+      loop
+      autoplay>
+    </lottie-player>
   </div>
-</section>
+  </section>
 
   <!-- ================= ABOUT ================= -->
   <section id="about">
@@ -218,5 +180,6 @@
       });
     });
   </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
 </body>
 </html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loukas Pritsas – Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Loukas D. Pritsas</h1>
+    <p>Data & AI Engineer with passion for building impactful digital products.</p>
+  </section>
+
+  <section id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="assets/DSC6785.jpg" alt="Loukas Portrait" />
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I’m a Data & AI Engineer with strong experience in transforming business needs into scalable, data-driven solutions.
+        With a background in data analysis, I love building tools that bridge technology and real-world impact.</p>
+        <p>I have extensive experience in data warehouse systems and am expanding into AI and Python development.
+        Through certifications, hands-on projects, and Kaggle competitions, I have built strong Python, ML and cloud skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-button">LLMs – You Can't Please Them All</button>
+        <div class="accordion-content">
+          <p><strong>May 2024 – May 2025</strong></p>
+          <p>Kaggle competition to identify adversarial prompts for an LLM-as-a-judge system that evaluates essay quality.</p>
+          <p><em>Citation:</em> Paul Mooney, Ashley Chow, and Will Cukierski. Kaggle, 2024.</p>
+          <p><strong>Skills:</strong> Prompt Engineering, LLMs, Model Evaluation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Core Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item"><h3>Python</h3><p>ETL pipelines, API development, data analysis</p></div>
+      <div class="skill-item"><h3>SQL</h3><p>Data modeling, performance tuning</p></div>
+      <div class="skill-item"><h3>Power BI</h3><p>Interactive dashboards & KPIs</p></div>
+      <div class="skill-item"><h3>AI & ML</h3><p>Model training, evaluation, deployment</p></div>
+      <div class="skill-item"><h3>Web Dev</h3><p>Flask, React, API integration</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via email or connect below.</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+    </div>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Loukas D. Pritsas. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".accordion-button");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.parentElement;
+          const isActive = item.classList.contains("active");
+          document.querySelectorAll(".accordion-item").forEach((i) => i.classList.remove("active"));
+          if (!isActive) item.classList.add("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>

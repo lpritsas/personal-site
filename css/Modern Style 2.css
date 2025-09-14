@@ -242,3 +242,17 @@ footer{
   .hero-grid{ grid-template-columns: 1fr; gap: 2rem; }
   .hero-visual-svg{ max-width: 360px; }
 }
+
+/* ===== Lottie variant ===== */
+.hero-visual-lottie{
+  max-width: 520px; width:100%;
+  aspect-ratio: 1/1;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,.25));
+}
+.hero-visual-lottie lottie-player{
+  width:100%; height:100%;
+}
+
+@media (max-width: 900px){
+  .hero-visual-lottie{ max-width: 360px; }
+}

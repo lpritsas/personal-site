@@ -1,0 +1,150 @@
+section { 
+  padding: 5px ;     /* κάθετο padding σε όλα τα sections */
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;              /* κάνει το navbar flex container */
+  justify-content: center;    /* κεντράρει οριζόντια */
+  background: #f5f5f5;        /* προαιρετικό background */
+  padding: 1rem;
+}
+
+.nav-links {
+  list-style: none;           /* βγάζει τις κουκκίδες */
+  display: flex;              /* βάζει τα li σε σειρά */
+  gap: 2rem;                  /* απόσταση μεταξύ links */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;      /* βγάζει το underline */
+  color: #333;                /* χρώμα κειμένου */
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0077cc;             /* χρώμα όταν κάνεις hover */
+}
+
+/* ===== General Styles ===== */
+body { line-height: 1.6} /* καλύτερη αναγνωσιμότητα κειμένου */
+h1, h2 { margin: 0 0 1rem; margin-top: 3rem} /* αφαιρεί extra πάνω margin, κρατάει κάτω */
+
+.title {
+  text-align: center; /* κέντρο ο τίτλος */
+  padding: 10px;      /* απόσταση γύρω από τον τίτλο */
+}
+
+.subtitle {
+  text-align: center; /* υπότιτλος στο κέντρο */
+}
+
+.description {
+  text-align: center; /* περιγραφή στο κέντρο */
+  padding: 20px;      /* spacing για ευκολία ανάγνωσης */
+}
+
+section {
+  background-color: whitesmoke; /* απαλή γκρι απόχρωση για όλα τα sections */
+}
+
+/* ===== About Section ===== */
+.about {
+  display: grid; 
+  grid-template-columns: auto 1fr; /* φωτό - κείμενο */
+  grid-template-rows: auto 1fr;        /* προσαρμόζεται αυτόματα στο περιεχόμενο */
+  align-items: start;              /* να ξεκινούν όλα από πάνω */
+  column-gap: 10px;              /* απόσταση φωτό–κειμένου */
+  padding: 30px;                   /* padding γύρω από το section */
+  text-align: left;                /* στοίχιση κειμένου αριστερά */
+}
+
+.about-image {          
+  width: 150px;  /* σταθερό πλάτος για τη φωτο */
+  margin: 0;     /* χωρίς extra περιθώρια */
+}
+
+.about-image img {      
+  width: 100%;           /* η εικόνα γεμίζει το container */
+  height: auto;          /* κρατάει τις αναλογίες */
+  border-radius: 12px;   /* στρογγυλεμένες γωνίες */
+  display: block;        /* αφαιρεί inline spacing */
+  transform: rotate(0deg); /* περιστροφή (εδώ μηδέν) */
+  opacity: 0.8;          /* ελαφριά διαφάνεια */
+}
+
+/* ===== Containers ===== */
+.container {
+  display: grid;                 
+  grid-template-columns: 1fr;    /* μία στήλη */
+  grid-template-rows: 1fr;       /* μία σειρά */
+  gap: 10px;                     /* απόσταση μεταξύ στοιχείων */
+}
+
+.work-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* δύο στήλες (π.χ. project cards) */
+  grid-template-rows: 1fr;        /* μία σειρά */
+  gap: 10px;                      /* κενό ανάμεσα */
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr;     /* όλα σε μία στήλη */
+  grid-template-rows: 1fr;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* τρεις στήλες (gallery images) */
+  grid-template-rows: 1fr;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* δύο στήλες για projects */
+  grid-template-rows: 1fr;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: 1fr; /* όλα σε μία στήλη (π.χ. στο mobile) */
+  grid-template-rows: 1fr;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;     /* κεντραρισμένο κείμενο/footer links */
+  padding: 20px;          /* εσωτερικό padding */
+  background-color: #f5f5f5; /* ελαφρύ γκρι background */
+}
+
+/* ===== Contact Form Styles ===== */
+#contact-form {
+  display: flex;          /* βάζει τα πεδία σε σειρά */
+  flex-wrap: wrap;        /* για να σπάνε σε μικρές οθόνες */
+  gap: 10px;              /* απόσταση μεταξύ τους */
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;          /* εσωτερικό κενό */
+  border: 1px solid #ccc; /* απλό περίγραμμα */
+  border-radius: 5px;     /* στρογγυλεμένες γωνίες */
+  font-size: 1rem;
+}
+
+#contact-form input {
+  flex: 1;                /* τα inputs μοιράζονται χώρο */
+  min-width: 100px;
+  height: 10px;           /* ίδιο ύψος */
+}
+
+#contact-form textarea {
+  flex: 1;                /* πιάνει μεγαλύτερο χώρο */
+  min-height: 10px;       /* ίδιο αρχικό ύψος με τα inputs */
+  resize: vertical;       /* επιτρέπει στον χρήστη να μεγαλώνει κάθετα */
+}
